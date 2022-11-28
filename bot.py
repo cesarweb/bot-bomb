@@ -87,11 +87,11 @@ with open('espanol.txt','r', encoding="utf8")as Palabras:
                                                 lettersArray.append(K)
                                 X=False
                                 while not X:
-                                        q=driver.find_element(By.CSS_SELECTOR,'selfTurn').get_attribute('hidden')
+                                        q=driver.find_element(By.CSS_SELECTOR,'.selfTurn').get_attribute('hidden')
                                         if q!='true':
                                                 X=True
 
-                                D=driver.find_element(By.CSS_SELECTOR,'syllable').text
+                                D=driver.find_element(By.CSS_SELECTOR,'.syllable').text
                                 # AttributeError: 'WebDriver' object has no attribute 'find_element_by_css_selector'
 
                                 D=D.lower()
@@ -116,7 +116,7 @@ with open('espanol.txt','r', encoding="utf8")as Palabras:
                                         # X = True # selector eliminar relacionado con linea 88 de codigo
                                         if X:
                                                 input('Use la palabra > ' + E)
-                                                # Enviar(E)
+                                                Enviar(E)
                                         sleep(0.3)
                                         Lineas.remove(E)
 
